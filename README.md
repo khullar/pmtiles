@@ -1,7 +1,9 @@
 # pmtiles
+
 PMTiles extacts for use with Protomaps
 
 ## Comparison of total tiles count and file size based on the zoom level selected
+
 ```
 ➜  go-pmtiles_1.25.0_Linux_x86_64 ./pmtiles extract https://build.protomaps.com/20250424.pmtiles planet_z0.pmtiles --maxzoom=0
 Region tiles 1, result tile entries 1
@@ -33,9 +35,15 @@ Extract transferred 43 MB (overfetch 0.05) for an archive size of 43 MB
 ```
 
 ## Converting geojson to pmtiles
+
 1. git clone https://github.com/felt/tippecanoe.git
 2. cd tippecanoe
 3. make -j
 4. make install
 5. tippecanoe -o ./countries.mbtiles ./countries.geojson --maximum-zoom=4 --minimum-zoom=0 --no-tile-size-limit
 6. ./pmtiles convert ./countries.mbtiles ./countries.pmtiles
+
+## Acknowledgments
+
+1. The GeoJSON files used to create country ADM0 and ADM1 pmtiles are sourced from https://www.geoboundaries.org/
+2. Global pmtiles are sourced from https://build.protomaps.com
