@@ -43,6 +43,12 @@ Extract transferred 43 MB (overfetch 0.05) for an archive size of 43 MB
 5. tippecanoe -o ./countries.mbtiles ./countries.geojson --maximum-zoom=4 --minimum-zoom=0 --no-tile-size-limit
 6. ./pmtiles convert ./countries.mbtiles ./countries.pmtiles
 
+## Creating fonts for use with Maps
+
+1. Install build_pbf_glyphs from https://github.com/stadiamaps/sdf_font_tools
+2. Get the ttf files for the fonts you want to use.
+3. build_pbf_glyphs <TTF Source Directory> <Output Directory>
+
 ## Acknowledgments
 
 1. The GeoJSON files used to create country ADM0 and ADM1 pmtiles are sourced from https://www.geoboundaries.org/
